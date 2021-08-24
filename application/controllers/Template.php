@@ -8,6 +8,9 @@ class Template extends CI_Controller{
 		$data = array();
 		$data['view'] = "acceuil.php";
         $this->load->helper('assets');
+        $this->load->model('fonctions');
+        $data['produit']=$this->fonctions->getProduit();
+        $data['admin']=$this->fonctions->checkAdmin('root','azerty');
         $this->load->view('template', $data);
     }
 }
