@@ -60,10 +60,10 @@ https://www.tooplate.com/view/2114-pixie
               <a class="nav-link" href="about.html">About Us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact Us</a>
+              <a class="nav-link" href="Login">Login</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="Login">Login</a>
+              <a class="nav-link" href="Load/Detruire">Logout</a>
             </li>
           </ul>
         </div>
