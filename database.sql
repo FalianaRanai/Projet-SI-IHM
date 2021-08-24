@@ -50,11 +50,21 @@ CREATE TABLE Utilisateur
 	Password VARCHAR(41),
 	PRIMARY KEY(IDUtilisateur)
 )Engine=InnoDB;
-INSERT INTO Produit VALUES(NULL, "Jean clair XL", "15.00", ""), 
-	(NULL, "Jean foncé XL", "25.00", ""), 
-	(NULL, "Doudoune bleu", "35.00", ""), 
-	(NULL, "Sac a main bleu clair", "45.00", ""), 
-	(NULL, "Sac a main rose", "55.00", ""), 
-	(NULL, "Pair de Converse", "65.00", "");
+INSERT INTO Produit VALUES(NULL, "Jean clair XL", "15.00", "big-03"), 
+	(NULL, "Jean foncé XL", "25.00", "big-02"), 
+	(NULL, "Doudoune bleu", "35.00", "item-03"), 
+	(NULL, "Sac a main bleu clair", "45.00", "item-04"), 
+	(NULL, "Sac a main rose", "55.00", "item-05"), 
+	(NULL, "Pair de Converse", "65.00", "item-06"),
+	(NULL, "Boxer","20.00","Boxer"),
+	(NULL, "Capuche hiver","100.00","capuche hiver"),
+	(NULL, "Chaussette","5.00","chaussette"),
+	(NULL, "Chaussure chantiers","30.00","chaussure chantiers"),
+	(NULL, "Crmonie Rockabilly","125.00","Crmonie Rockabilly"),
+	(NULL, "Dahalia soutien gorge","13.00","dahalia soutien gorge"),
+	(NULL, "Pantalon","80.00","pantalon"),
+	(NULL, "pull blanc & noir","200.00","pull blanc & noir"),
+	(NULL, "Robe sans manches","300.00","robe sans manches");
+
 
 INSERT INTO ADMIN values(NULL,'root',sha1('azerty'));
