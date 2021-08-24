@@ -19,15 +19,11 @@ class Template extends CI_Controller{
         $this->load->model('fonctions');
         $username=$this->input->post('username');
         $password=$this->input->post('password');
-        $data['admin']=$this->fonctions->checkAdmin($username,$password);
-        $data['utilisateur']=$this->fonctions->checkUser($username,$password);
-        if($data['admin']!=NULL){
-            $this->session->set_userdata('administrateur',$username);
-            redirect(site_url("Admin"));
-        }else if($data['utilisateur']!=NULL){
-            $this->session->set_userdata('user',$username);
-            redirect(site_url("Template"));
-        }
+        $this->load->library('session');
+        $this->session->set_userdata('administrateur',$username);
+        $this->session->set_userdata('user',$username);
+        redirect(site_url("BaseController"));
+        //var_dump($this->session->userdata('administrateur'));
     }
 }
 ?>
