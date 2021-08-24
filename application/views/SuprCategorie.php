@@ -13,7 +13,25 @@
 				</tr>
 			  </thead>	
 			  <tbody>
-				<?php echo count($categorie);?>
+				<?php foreach($categorie as $cat){?>
+				<tr class="light">
+				  <td>
+					<div id="lsouhait">
+						<?php echo $cat['IDCategorie'];?>
+					</div>
+				  </td>
+				  <td>
+					<div id="lsouhait">
+						<?php echo $cat['NomCategorie'];?>
+					</div>
+				  </td>
+				  <td>
+					<div id="bsouhait">
+						<a href="#" style="text-decoration:none;"><button type="button" class="btn btn-danger">Supprimer</button></a>
+					</div>
+				  </td>
+				</tr>
+				<?php }?>
 			  </tbody>
 			</table>
 		</div>

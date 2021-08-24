@@ -15,6 +15,16 @@
 		  </div>
 		  <div class="form-group">
 			<h6 style="margin-bottom:20px;">Catégories : </h6>
+			<?php
+					$indice=0;
+					foreach($categorie as $cat){
+						 $indice++;?>
+						 <div class="form-check-inline">
+						  <label class="form-check-label" for="radio<?php echo $indice;?>">
+							<input type="radio" class="form-check-input" id="radio<?php echo $indice;?>" name="radiocategorie" value="<?php echo $cat['NomCategorie'];?>"><?php echo $cat['NomCategorie'];?>
+						  </label>
+						</div>
+				<?php }?>
 				
 		  </div>
 		  <div class="form-group">

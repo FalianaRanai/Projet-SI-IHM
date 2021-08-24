@@ -10,13 +10,51 @@
 				  <th scope="col"></th>	
 				  <th scope="col">ID</th>
 				  <th scope="col">Nom du produit</th>	
-				  <th scope="col">Points</th>
+				  <th scope="col">Prix</th>
 				  <th scope="col">Catégorie</th>	
 				  <th scope="col"></th>
 				</tr>
 			  </thead>	
 			  <tbody>
-				
+				<?php foreach($produit as $prod){?>
+				<tr class="light">
+				  <th scope="row" id="lminiature"><img src=<?php echo img_loader($prod['Source'], "jpg");?> class="img-fluid" width="100px;"></th>
+				  <td>
+					<div id="lsouhait">
+						<?php echo $prod['IDProduit'];?>
+					</div>
+				  </td>
+				  <td>
+					<div id="lsouhait">
+						<?php echo $prod['NomProduit'];?>
+					</div>
+				  </td>
+				  <td>
+					<div id="lsouhait">
+						<?php echo $prod['Prix'];?>
+					</div>
+				  </td>
+				  <td>
+					<div id="lsouhait">
+						<?php
+							for($i=0; $i<count($categorie); $i++)
+							{
+								if($prod['IDCategorie']==$categorie[$i]["IDCategorie"])
+								{
+									echo $categorie[$i]['NomCategorie'];
+								}
+							} 
+							
+						?>
+					</div>
+				  </td>
+				  <td>
+					<div id="bsouhait">
+						<a href="#" style="text-decoration:none;"><button type="button" class="btn btn-danger">Supprimer</button></a>
+					</div>
+				  </td>
+				</tr>
+			<?php }?>
 			  </tbody>
 			</table>
 		</div>

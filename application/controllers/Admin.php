@@ -18,6 +18,8 @@ class Admin extends CI_Controller{
     {
     	$data = array();
 		$data['view'] = "ModifCategorie.php";
+        $this->load->model('fonctions');
+        $data['categorie']=$this->fonctions->getCategory();
         $this->load->helper('assets');
         $this->load->view('admin', $data);
     }
@@ -35,6 +37,9 @@ class Admin extends CI_Controller{
     	$data = array();
 		$data['view'] = "AjoutProduit.php";
         $this->load->helper('assets');
+        $this->load->model('fonctions');
+        $data['categorie']=$this->fonctions->getCategory();
+        $data['produit']=$this->fonctions->getProduit();
         $this->load->view('admin', $data);
     }
     public function SupprimerProduit()
@@ -42,6 +47,9 @@ class Admin extends CI_Controller{
     	$data = array();
 		$data['view'] = "SuprProduit.php";
         $this->load->helper('assets');
+        $this->load->model('fonctions');
+        $data['categorie']=$this->fonctions->getCategory();
+        $data['produit']=$this->fonctions->getProduit();
         $this->load->view('admin', $data);
     }
     public function ModifierProduit()
@@ -49,6 +57,9 @@ class Admin extends CI_Controller{
     	$data = array();
 		$data['view'] = "ModifProduit.php";
         $this->load->helper('assets');
+        $this->load->model('fonctions');
+        $data['categorie']=$this->fonctions->getCategory();
+        $data['produit']=$this->fonctions->getProduit();
         $this->load->view('admin', $data);
     }
 }

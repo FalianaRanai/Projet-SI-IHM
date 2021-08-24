@@ -66,14 +66,14 @@ INSERT INTO Produit VALUES(NULL, "Jean clair XL", "15.00", "big-03", 1),
 	(NULL, "Sac a main rose", "55.00", "item-05",2), 
 	(NULL, "Pair de Converse", "65.00", "item-06",1),
 	(NULL, "Boxer","20.00","Boxer",1),
-	(NULL, "Capuche hiver","100.00","capuche hiver",1),
+	(NULL, "Capuche hiver","100.00","capuche_hiver",1),
 	(NULL, "Chaussette","5.00","chaussette",3),
-	(NULL, "Chaussure chantiers","30.00","chaussure chantiers",3),
-	(NULL, "Crmonie Rockabilly","125.00","Crmonie Rockabilly",2),
-	(NULL, "Dahalia soutien gorge","13.00","dahalia soutien gorge",2),
+	(NULL, "Chaussure chantiers","30.00","chaussure_chantiers",3),
+	(NULL, "Crmonie Rockabilly","125.00","Crmonie_Rockabilly",2),
+	(NULL, "Dahalia soutien gorge","13.00","dahalia_soutien_gorge",2),
 	(NULL, "Pantalon","80.00","pantalon",1),
-	(NULL, "pull blanc & noir","200.00","pull blanc & noir",1),
-	(NULL, "Robe sans manches","300.00","robe sans manches",2);
+	(NULL, "pull blanc & noir","200.00","pull_blanc_&_noir",1),
+	(NULL, "Robe sans manches","300.00","robe_sans_manches",2);
 
 
 INSERT INTO ADMIN values(NULL,'root',sha1('azerty'));

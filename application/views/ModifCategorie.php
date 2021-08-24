@@ -13,7 +13,30 @@
 				</tr>
 			  </thead>	
 			  <tbody>
-				
+				<?php foreach($categorie as $cat){?>
+				<form action="#" method="get">
+					<input type="hidden" name="modifCategorie" value="1">
+					<input type="hidden" name="idCategorie" value="<?php echo $cat['IDCategorie'];?>">
+					<input type="hidden" name="anciencategorie" value="<?php echo $cat['NomCategorie'];?>">
+					<tr class="light">
+					  <td>
+						<div id="lsouhait">
+							<?php echo $cat['IDCategorie'];?>
+						</div>
+					  </td>
+					  <td>
+						<div id="lsouhait">
+							<input type="text" value="<?php echo $cat['NomCategorie'];?>" name="nomCategorie"/>
+						</div>
+					  </td>
+					  <td>
+						<div id="bsouhait">
+							<input type="submit" class="btn btn-primary" value="Modifier" />
+						</div>
+					  </td>
+					</tr>
+				</form>
+				<?php }?>
 			  </tbody>
 			</table>
 		</div>
