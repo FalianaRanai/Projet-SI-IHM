@@ -3,7 +3,7 @@
 	<h1 class="h2">Ajouter une catégorie</h1>
   </div>
 	<div class="input-group flex-nowrap">
-		<form action="Page/traitement.php" method="POST">
+		<form action="<?php echo site_url()."Admin/TraitementAjouterCategorie";?>" method="POST">
 			<div class="form-group">
 				<h6 style="margin-bottom:20px;">Nom de la catégorie : </h6>
 				<input type="text" id="insert" class="form-control" aria-label="Username" aria-describedby="addon-wrapping" name="ajoutCat">

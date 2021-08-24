@@ -18,24 +18,24 @@
 			  </thead>	
 			  <tbody>
 				<?php foreach($produit as $prod){?>
-				<form action="#" method="get">
+				<form action="<?php echo site_url()."Admin/TraitementModifierProduit";?>" method="POST">
 					<input type="hidden" name="modifProd" value="1">
 					<tr class="light">
 					  <th scope="row" id="lminiature"><img src=<?php echo img_loader($prod['Source'], "jpg");?> class="img-fluid" width="100px;"></th>
 					  <td>
 						<div id="lsouhait">
 							<?php echo $prod['IDProduit'];?>
-							<input type="hidden" name="idCadeau" value="<?php echo $prod['IDProduit'];?>">
+							<input type="hidden" name="idProduit" value="<?php echo $prod['IDProduit'];?>">
 						</div>
 					  </td>
 					  <td>
 						<div id="lsouhait">
-							<input type="text" name="NomCadeau" value="<?php echo $prod['NomProduit'];?>" style="width:100px;"/>
+							<input type="text" name="NomProduit" value="<?php echo $prod['NomProduit'];?>" style="width:100px;"/>
 						</div>
 					  </td>
 					  <td>
 						<div id="lsouhait">
-							<input type="text" name="Points" value="<?php echo $prod['Prix'];?>" style="width:100px;"/>
+							<input type="text" name="Prix" value="<?php echo $prod['Prix'];?>" style="width:100px;"/>
 						</div>
 					  </td>
 					  <td>
@@ -45,7 +45,7 @@
 					  </td>
 					  <td>
 						<div id="lsouhait">
-							<input type="text" name="Image" value="<?php echo $prod['Source'];?> " style="width:100px;"/>
+							<input type="text" name="Source" value="<?php echo $prod['Source'];?> " style="width:100px;"/>
 						</div>
 					  </td>
 					  <td>

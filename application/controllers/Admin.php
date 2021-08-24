@@ -64,5 +64,53 @@ class Admin extends CI_Controller{
         $data['produit']=$this->fonctions->getProduit();
         $this->load->view('admin', $data);
     }
+
+    public function TraitementAjouterCategorie()
+    {
+        $this->load->helper('assets');
+        $this->load->model('fonctions');
+        $this->fonctions->insertCategorie($this->input->post('ajoutCat'));
+        redirect(site_url("Admin/AjouterCategorie"));
+    }
+
+    public function TraitementSupprimerCategorie()
+    {
+        $this->load->helper('assets');
+        $this->load->model('fonctions');
+        $this->fonctions->deleteCategorie($this->input->get('id'));
+        redirect(site_url("Admin/SupprimerCategorie"));
+    }
+
+    public function TraitementModifierCategorie()
+    {
+        $this->load->helper('assets');
+        $this->load->model('fonctions');
+        $this->fonctions->updateCategorie($this->input->post('idCategorie'), $this->input->post('nomCategorie'));
+        redirect(site_url("Admin/ModifierCategorie"));
+    }
+
+    public function TraitementAjouterProduit()
+    {
+        $this->load->helper('assets');
+        $this->load->model('fonctions');
+        $this->fonctions->insertProduit($this->input->post('nomProduit'), $this->input->post('prix'), $this->input->post('radiocategorie'), $this->input->post('imageProduit'));
+        redirect(site_url("Admin/AjouterProduit"));
+    }
+
+    public function TraitementSupprimerProduit()
+    {
+        $this->load->helper('assets');
+        $this->load->model('fonctions');
+        $this->fonctions->deleteProduit($this->input->get('id'));
+        redirect(site_url("Admin/SupprimerProduit"));
+    }
+
+    public function TraitementModifierProduit()
+    {
+        $this->load->helper('assets');
+        $this->load->model('fonctions');
+        $this->fonctions->updateProduit($this->input->post('idProduit'), $this->input->post('NomProduit'), $this->input->post('Prix'), $this->input->post('Categorie'), $this->input->post('Source'));
+        redirect(site_url("Admin/ModifierProduit"));
+    }
 }
 ?>

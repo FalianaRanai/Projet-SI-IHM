@@ -14,10 +14,8 @@
 			  </thead>	
 			  <tbody>
 				<?php foreach($categorie as $cat){?>
-				<form action="#" method="get">
-					<input type="hidden" name="modifCategorie" value="1">
+				<form action="<?php echo site_url()."Admin/TraitementModifierCategorie";?>" method="post">
 					<input type="hidden" name="idCategorie" value="<?php echo $cat['IDCategorie'];?>">
-					<input type="hidden" name="anciencategorie" value="<?php echo $cat['NomCategorie'];?>">
 					<tr class="light">
 					  <td>
 						<div id="lsouhait">

@@ -27,7 +27,7 @@
 				  </td>
 				  <td>
 					<div id="bsouhait">
-						<a href="#" style="text-decoration:none;"><button type="button" class="btn btn-danger">Supprimer</button></a>
+						<a href="<?php echo site_url()."Admin/TraitementSupprimerCategorie?id=".$cat['IDCategorie'];?>" style="text-decoration:none;"><button type="button" class="btn btn-danger">Supprimer</button></a>
 					</div>
 				  </td>
 				</tr>

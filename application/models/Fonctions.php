@@ -50,12 +50,6 @@ class Fonctions extends CI_Model{
         return $retour;
     }
 
-    public function insertProduit($nom,$prix,$image){
-        $sql = "INSERT INTO Produit VALUES (NULL,%s,%s,%s)";
-        $sql = sprintf($sql,$this->db->escape($nom),$this->db->escape($prix),$this->db->escape($image));
-        $this->db->query($sql);
-    }
-
     public function insertCategory($nom){
         $sql = "INSERT INTO Categorie VALUES (NULL,%s)";
         $sql = sprintf($sql,$this->db->escape($nom));
@@ -68,9 +62,46 @@ class Fonctions extends CI_Model{
         $this->db->query($sql);
     }
 
-    public function deleteProduit($id){
-        $sql="DELETE FROM Produit WHERE IDProduit=%s";
-        $sql = sprintf($sql,$this->db->escape($id));
+
+    public function insertCategorie($nomCategorie)
+    {
+        $sql="INSERT INTO Categorie VALUES(NULL, '%s')";
+        $sql = sprintf($sql, $nomCategorie);
+        $this->db->query($sql);
+    }
+
+    public function deleteCategorie($idCategorie)
+    {
+        $sql="DELETE FROM Categorie WHERE IDCategorie='%s'";
+        $sql = sprintf($sql, $idCategorie);
+        $this->db->query($sql);
+    }
+
+    public function updateCategorie($idCategorie, $nomCategorie)
+    {
+        $sql="UPDATE Categorie SET NomCategorie='%s' WHERE IDCategorie='%s'";
+        $sql = sprintf($sql, $nomCategorie, $idCategorie);
+        $this->db->query($sql);
+    }
+
+    public function insertProduit($nomProduit, $prix, $idcategorie, $source)
+    {
+        $sql="INSERT INTO Produit VALUES(NULL, '%s', '%s', '%s', '%s')";
+        $sql = sprintf($sql, $nomProduit, $prix, $source, $idcategorie);
+        $this->db->query($sql);
+    }
+
+    public function deleteProduit($idProduit)
+    {
+        $sql="DELETE FROM Produit WHERE IDProduit='%s'";
+        $sql = sprintf($sql, $idProduit);
+        $this->db->query($sql);
+    }
+
+    public function updateProduit($idProduit, $nomProduit, $prix, $idcategorie, $source)
+    {
+        $sql="UPDATE Produit SET NomProduit='%s', Prix='%s', Source='%s', IDCategorie='%s' WHERE IDProduit='%s'";
+        $sql = sprintf($sql, $nomProduit, $prix, $source, $idcategorie, $idProduit);
         $this->db->query($sql);
     }
 } 
