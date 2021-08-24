@@ -49,3 +49,5 @@ INSERT INTO Produit VALUES(NULL, "Jean clair XL", "15.00", ""),
 	(NULL, "Sac a main bleu clair", "45.00", ""), 
 	(NULL, "Sac a main rose", "55.00", ""), 
 	(NULL, "Pair de Converse", "65.00", "");
+
+INSERT INTO ADMIN values(NULL,'root',sha1('azerty'));
