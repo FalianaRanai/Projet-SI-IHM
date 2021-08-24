@@ -21,6 +21,7 @@ class Template extends CI_Controller{
         $password=$this->input->post('password');
         $this->load->library('session');
         $this->session->set_userdata('administrateur',$username);
+        $data['usser']=$this->session->set_userdata('administrateur',$username);
         $this->session->set_userdata('user',$username);
         redirect(site_url("BaseController"));
         //var_dump($this->session->userdata('administrateur'));
