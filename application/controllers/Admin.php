@@ -4,8 +4,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Admin extends CI_Controller{
     public function index()
     {
+        $data=array();
+        $data['user']=$this->session->userdata('administrateur');
         $this->load->helper('assets');
-        $this->load->view('admin');
+        $this->load->view('admin',$data);
     }
     public function AjouterCategorie()
     {

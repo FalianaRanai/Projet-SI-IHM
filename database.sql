@@ -77,3 +77,5 @@ INSERT INTO Produit VALUES(NULL, "Jean clair XL", "15.00", "big-03", 1),
 
 
 INSERT INTO ADMIN values(NULL,'root',sha1('azerty'));
+
+INSERT INTO Utilisateur values(NULL,'user1',sha1('azerty'));

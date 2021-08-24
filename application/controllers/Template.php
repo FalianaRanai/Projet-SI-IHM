@@ -11,6 +11,7 @@ class Template extends CI_Controller{
         $data['produit']=$this->fonctions->getProduit();
         $data['admin']=$this->fonctions->checkAdmin('root','azerty');
         $this->load->view('template', $data);
+        
     }
     public function login(){
         $data=array();
@@ -21,8 +22,10 @@ class Template extends CI_Controller{
         $data['admin']=$this->fonctions->checkAdmin($username,$password);
         $data['utilisateur']=$this->fonctions->checkUser($username,$password);
         if($data['admin']!=NULL){
+            $this->session->set_userdata('administrateur',$username);
             redirect(site_url("Admin"));
-        }else if($data['utilisateur'])!=NULL){
+        }else if($data['utilisateur']!=NULL){
+            $this->session->set_userdata('user',$username);
             redirect(site_url("Template"));
         }
     }

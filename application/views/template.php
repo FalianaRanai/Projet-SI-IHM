@@ -91,7 +91,7 @@ https://www.tooplate.com/view/2114-pixie
     </div>
     <!-- Banner Ends Here -->
 
-    <?php include($view); ?>
+    <?php include($view);?>
 
 
     <!-- Subscribe Form Starts Here -->
