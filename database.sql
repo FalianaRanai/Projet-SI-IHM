@@ -54,10 +54,12 @@ CREATE TABLE Utilisateur
 	PRIMARY KEY(IDUtilisateur)
 )Engine=InnoDB;
 
+INSERT INTO ADMIN values(NULL,'root',sha1('azerty'));
+INSERT INTO Utilisateur values(NULL,'user1',sha1('azerty'));
+
 INSERT INTO Categorie VALUES(NULL, "Homme"),
 	(NULL, "Femme"),
 	(NULL, "Enfant");
-
 
 INSERT INTO Produit VALUES(NULL, "Jean clair XL", "15.00", "big-03", 1), 
 	(NULL, "Jean foncé XL", "25.00", "big-02",2), 
@@ -75,7 +77,6 @@ INSERT INTO Produit VALUES(NULL, "Jean clair XL", "15.00", "big-03", 1),
 	(NULL, "pull blanc & noir","200.00","pull_blanc_&_noir",1),
 	(NULL, "Robe sans manches","300.00","robe_sans_manches",2);
 
-
-INSERT INTO ADMIN values(NULL,'root',sha1('azerty'));
-
-INSERT INTO Utilisateur values(NULL,'user1',sha1('azerty'));
+INSERT INTO Caisse VALUES(NULL,"Caisse 1"),
+	(NULL,"Caisse 2"),
+	(NULL,"Caisse 3");
