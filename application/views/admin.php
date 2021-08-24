@@ -8,6 +8,7 @@
     <title>Administrateur</title>
     <link href=<?php echo css_loader("bootstrap.min"); ?> rel="stylesheet">
     <link href=<?php echo css_loader("dashboard"); ?> rel="stylesheet">
+    <link href=<?php echo css_loader("style"); ?> rel="stylesheet">
 	<link href=<?php echo css_loader("all"); ?> rel="stylesheet">
   </head>
   <body>

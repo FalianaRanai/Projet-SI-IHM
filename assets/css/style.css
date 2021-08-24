@@ -1,0 +1,19 @@
+#lsouhait
+{
+	margin-top:25px;
+}
+#lminiature
+{
+	height:100px;
+	width:100px;
+}
+#bsouhait
+{
+	margin-top:20px;
+}
+.light{
+	transition: .5s;
+}
+.light:hover{
+	transform: scale(1.05);
+}
