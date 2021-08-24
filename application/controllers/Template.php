@@ -26,7 +26,6 @@ class Template extends CI_Controller{
         else if($this->fonctions->checkUser($username,$password)!=NULL){
             $this->session->set_userdata("utilisateur",$username);
             redirect(site_url("Template"));
-            
         }
         redirect(site_url("Login"));
         //var_dump($this->session->userdata('administrateur'));
