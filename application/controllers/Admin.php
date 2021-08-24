@@ -25,6 +25,8 @@ class Admin extends CI_Controller{
     {
     	$data = array();
 		$data['view'] = "SuprCategorie.php";
+        $this->load->model('fonctions');
+        $data['categorie']=$this->fonctions->getCategory();
         $this->load->helper('assets');
         $this->load->view('admin', $data);
     }

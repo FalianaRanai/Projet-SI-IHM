@@ -13,7 +13,7 @@
 				</tr>
 			  </thead>	
 			  <tbody>
-				
+				<?php echo count($categorie);?>
 			  </tbody>
 			</table>
 		</div>
