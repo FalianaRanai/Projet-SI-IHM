@@ -38,5 +38,29 @@ class Fonctions extends CI_Model{
         }
         return $retour;
     }
+
+    public function insertProduit($nom,$prix,$image){
+        $sql = "INSERT INTO Produit VALUES (NULL,%s,%s,%s)";
+        $sql = sprintf($sql,$this->db->escape($nom),$this->db->escape($prix),$this->db->escape($image));
+        $this->db->query($sql);
+    }
+
+    public function insertCategory($nom){
+        $sql = "INSERT INTO Categorie VALUES (NULL,%s)";
+        $sql = sprintf($sql,$this->db->escape($nom));
+        $this->db->query($sql);
+    }
+
+    public function insertCaisse($numero){
+        $sql = "INSERT INTO Caisse VALUES (NULL,%s)";
+        $sql = sprintf($sql,$this->db->escape($numero));
+        $this->db->query($sql);
+    }
+
+    public function deleteProduit($id){
+        $sql="DELETE FROM Produit WHERE IDProduit=%s";
+        $sql = sprintf($sql,$this->db->escape($id));
+        $this->db->query($sql);
+    }
 } 
 ?>
