@@ -6,7 +6,7 @@ class Template extends CI_Controller{
     {
      	
 		$data = array();
-		$data['acceuil'] = "acceuil.php";
+		$data['view'] = "acceuil.php";
         $this->load->helper('assets');
         $this->load->view('template', $data);
     }
