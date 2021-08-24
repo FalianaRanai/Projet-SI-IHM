@@ -12,6 +12,7 @@ CREATE TABLE Produit
 (
 	IDProduit INT NOT NULL AUTO_INCREMENT,
 	NomProduit VARCHAR(100),
+	Prix Float,
 	Source VARCHAR(100),
 	PRIMARY KEY(IDProduit)
 )Engine=InnoDB;
@@ -41,3 +42,4 @@ CREATE TABLE Admin
 	Password VARCHAR(100),
 	PRIMARY KEY(IDAdmin)
 )Engine=InnoDB;
+
