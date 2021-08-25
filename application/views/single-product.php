@@ -33,6 +33,7 @@
                       value="1">
                   <span class="plus quantity-text">+</span>
                 </span>
+                <input type="hidden" name="idProduit" value="<?php echo $produit[0]['IDProduit'];?>">
                  <input type="submit" class="button" value="Order Now!">
               </form>
               <div class="down-content">

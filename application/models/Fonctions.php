@@ -143,5 +143,41 @@ class Fonctions extends CI_Model{
         }
         return $retour;
     }
+    public function getAchat(){
+        $query=$this->db->query("SELECT * FROM Achat");
+        $retour=array();
+        foreach($query->result_array() as $one) {
+            $retour[]=$one;
+        }
+        return $retour;
+    }
+
+    public function getSommeCaisse($idCaisse){
+        
+        $sql="SELECT SUM(p.prix) as somme FROM Achat a, Produit p WHERE a.IDProduit=p.IDProduit AND a.IDCaisse='%s'";
+        $sql=sprintf($sql,$this->db->escape($idCaisse));
+        $query=$this->db->query($sql);
+        $retour=array();
+        foreach ($query->result_array() as $one) {
+            $retour[] = $one;
+        }
+        return $retour;
+    }
+
+    public function getSommeAll(){
+        $sql="SELECT SUM(p.prix) as somme FROM Achat a, Produit p WHERE a.IDProduit=p.IDProduit";
+        $query=$this->db->query($sql);
+        $retour=array();
+        foreach ($query->result_array() as $one) {
+            $retour[] = $one;
+        }
+        return $retour;
+    }
+
+    public function insertAchat($IDCaisse,$IDProduit,$IDQuantite){
+        $sql = "INSERT INTO Achat VALUES(NULL,%s,%s,%s)";
+        $sql = sprintf($sql,$this->db->escape($IDCaisse),$this->db->escape($IDProduit),$this->db->escape($IDQuantite));
+        $this->db->query($sql);
+    }
 } 
 ?>

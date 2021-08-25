@@ -60,7 +60,11 @@ class Template extends CI_Controller{
 
     public function checkAchat(){
         if($this->session->userdata("utilisateur")!=NULL){
-
+        $data = array();
+        $this->load->helper('assets');
+        $this->load->model('fonctions');
+        $data['somme']=$this->fonctions->getSommeCaisse(1);
+        echo $data['somme'][0]['somme'];
         }else{
             redirect(site_url("Login"));
         }
