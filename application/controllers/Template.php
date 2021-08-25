@@ -57,5 +57,13 @@ class Template extends CI_Controller{
         $data['products']= 1;
         $this->load->view('template', $data);
     }
+
+    public function checkAchat(){
+        if($this->session->userdata("utilisateur")!=NULL){
+
+        }else{
+            redirect(site_url("Login"));
+        }
+    }
 }
 ?>
