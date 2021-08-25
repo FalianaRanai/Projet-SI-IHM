@@ -28,30 +28,14 @@
                   <!-- items mirrored twice, total of 12 -->
                 </ul>
               </div>
-              <div id="carousel" class="flexslider">
-                <ul class="slides">
-                  <li>
-                    <img src="assets/images/thumb-01.jpg" />
-                  </li>
-                  <li>
-                    <img src="assets/images/thumb-02.jpg" />
-                  </li>
-                  <li>
-                    <img src="assets/images/thumb-03.jpg" />
-                  </li>
-                  <li>
-                    <img src="assets/images/thumb-04.jpg" />
-                  </li>
-                  <!-- items mirrored twice, total of 12 -->
-                </ul>
-              </div>
+              
             </div>
           </div>
           <div class="col-md-6">
             <div class="right-content">
               <h4>Single Product Name</h4>
               <h6>$55.00</h6>
-              <p>Proin commodo, diam a ultricies sagittis, erat odio rhoncus metus, eu feugiat lorem lacus aliquet arcu. Curabitur in gravida nisi, non placerat nibh. Praesent sit amet diam ultrices, commodo turpis id, dignissim leo. Suspendisse mauris massa, porttitor non fermentum vel, ullamcorper scelerisque velit. </p>
+              <p><?php echo $produit[0]['Description'];?></p>
               <span>7 left on stock</span>
               <form action="" method="get">
                 <label for="quantity">Quantity:</label>
@@ -89,69 +73,17 @@
           </div>
           <div class="col-md-12">
             <div class="owl-carousel owl-theme">
+
+            <?php for($i=0;$i<count($category);$i++){?>
               <a href="single-product.html">
                 <div class="featured-item">
-                  <img src="assets/images/item-01.jpg" alt="Item 1">
-                  <h4>Proin vel ligula</h4>
-                  <h6>$15.00</h6>
+                  <img src="<?php echo img_loader($category[$i]['Source'],"jpg");?>" alt="Item 1">
+                  <h4><?php echo $category[$i]["NomProduit"];?></h4>
+                  <h6>$<?php echo $category[$i]["Prix"];?></h6>
                 </div>
               </a>
-              <a href="single-product.html">
-                <div class="featured-item">
-                  <img src="assets/images/item-02.jpg" alt="Item 2">
-                  <h4>Erat odio rhoncus</h4>
-                  <h6>$25.00</h6>
-                </div>
-              </a>
-              <a href="single-product.html">
-                <div class="featured-item">
-                  <img src="assets/images/item-03.jpg" alt="Item 3">
-                  <h4>Integer vel turpis</h4>
-                  <h6>$35.00</h6>
-                </div>
-              </a>
-              <a href="single-product.html">
-                <div class="featured-item">
-                  <img src="assets/images/item-04.jpg" alt="Item 4">
-                  <h4>Sed purus quam</h4>
-                  <h6>$45.00</h6>
-                </div>
-              </a>
-              <a href="single-product.html">
-                <div class="featured-item">
-                  <img src="assets/images/item-05.jpg" alt="Item 5">
-                  <h4>Morbi aliquet</h4>
-                  <h6>$55.00</h6>
-                </div>
-              </a>
-              <a href="single-product.html">
-                <div class="featured-item">
-                  <img src="assets/images/item-06.jpg" alt="Item 6">
-                  <h4>Urna ac diam</h4>
-                  <h6>$65.00</h6>
-                </div>
-              </a>
-              <a href="single-product.html">
-                <div class="featured-item">
-                  <img src="assets/images/item-04.jpg" alt="Item 7">
-                  <h4>Proin eget imperdiet</h4>
-                  <h6>$75.00</h6>
-                </div>
-              </a>
-              <a href="single-product.html">
-                <div class="featured-item">
-                  <img src="assets/images/item-05.jpg" alt="Item 8">
-                  <h4>Nullam risus nisl</h4>
-                  <h6>$85.00</h6>
-                </div>
-              </a>
-              <a href="single-product.html">
-                <div class="featured-item">
-                  <img src="assets/images/item-06.jpg" alt="Item 9">
-                  <h4>Cras tempus</h4>
-                  <h6>$95.00</h6>
-                </div>
-              </a>
+            <?php } ?>
+
             </div>
           </div>
         </div>

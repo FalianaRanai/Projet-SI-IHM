@@ -115,5 +115,16 @@ class Fonctions extends CI_Model{
         }
         return $retour;
     }
+
+    public function findProduitByCat($categorie){
+        $sql="SELECT * FROM Produit WHERE IDCategorie=%s";
+        $sql=sprintf($sql,$this->db->escape($categorie));
+        $query=$this->db->query($sql);
+        $retour=array();
+        foreach ($query->result_array() as $one) {
+            $retour[] = $one;
+        }
+        return $retour;
+    }
 } 
 ?>
