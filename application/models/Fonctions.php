@@ -132,5 +132,16 @@ class Fonctions extends CI_Model{
         $sql = sprintf($sql,$this->db->escape($username),$this->db->escape($mdp));
         $this->db->query($sql);
     }
+
+    public function getCategoryId($idProduit){
+        $sql="SELECT c.NomCategorie  FROM Categorie c, Produit p WHERE c.IDCategorie=p.IDCategorie AND p.IDProduit=%s";
+        $sql=sprintf($sql,$this->db->escape($idProduit));
+        $query=$this->db->query($sql);
+        $retour=array();
+        foreach ($query->result_array() as $one){
+            $retour[]=$one;
+        }
+        return $retour;
+    }
 } 
 ?>

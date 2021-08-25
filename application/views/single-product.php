@@ -19,8 +19,8 @@
           </div>
           <div class="col-md-6">
             <div class="right-content">
-              <h4>Single Product Name</h4>
-              <h6>$55.00</h6>
+              <h4><?php echo $produit[0]['NomProduit'];?></h4>
+              <h6>$<?php echo $produit[0]['Prix'];?></h6>
               <p><?php echo $produit[0]['Description'];?></p>
               <span>7 left on stock</span>
               <form action="" method="get">
@@ -33,7 +33,7 @@
               </form>
               <div class="down-content">
                 <div class="categories">
-                  <h6>Category: <span><a href="#">Pants</a>,<a href="#">Women</a>,<a href="#">Lifestyle</a></span></h6>
+                  <h6>Category: <span><a href="#"><?php echo $nomCategory[0]['NomCategorie'];?></a></h6>
                 </div>
                 <div class="share">
                   <h6>Share: <span><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-linkedin"></i></a><a href="#"><i class="fa fa-twitter"></i></a></span></h6>

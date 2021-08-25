@@ -38,6 +38,7 @@ class Template extends CI_Controller{
         $this->load->model('fonctions');
         $data['produit']=$this->fonctions->findProduit($this->input->get('id'));
         $data['category']=$this->fonctions->findProduitByCat($data['produit'][0]['IDCategorie']);
+        $data['nomCategory']=$this->fonctions->getCategoryId($data['produit'][0]['IDProduit']);
         $this->load->view('template', $data);
         
     }
