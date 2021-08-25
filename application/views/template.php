@@ -114,9 +114,12 @@ https://www.tooplate.com/view/2114-pixie
       <?php 
         for($i=0; $i<count($caisse); $i++)
         {
+          if($this->session->userdata("idCaisse")!=$caisse[$i]['IDCaisse']){
           ?>
-            <a href="Caisse?idCaisse=<?php echo $caisse[$i]['IDCaisse'];?>"><button type="button" class="btn btn-primary btn-sm"><?php echo $caisse[$i]['NumeroCaisse']; ?></button></a>     
-          <?php
+            <a href="Template?idCaisse=<?php echo $caisse[$i]['IDCaisse'];?>"><button type="button" class="btn btn-primary btn-sm"><?php echo $caisse[$i]['NumeroCaisse']; ?></button></a>     
+          <?php } else {?>
+            <a href="Template?idCaisse=<?php echo $caisse[$i]['IDCaisse'];?>"><button type="button" class="btn btn-secondary btn-sm"><?php echo $caisse[$i]['NumeroCaisse']; ?></button></a>
+         <?php }
         }
       ?>
     </div>
