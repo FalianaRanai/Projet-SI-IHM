@@ -107,12 +107,12 @@ https://www.tooplate.com/view/2114-pixie
         <div class="row">
           <div class="col-md-12">
             <div class="caption">
-              <h2>Welcome,</h2>
+              <h2>Access,</h2>
               <div class="line-dec"></div>
-              <p>We are a site specializing in the sale of clothing ranging from <strong>children</strong> to <strong>adults</strong>. 
-              <br><br>We invite you to enjoy our gallery and thank you in advance for sharing our content</p>
+              <p>You can login as a client by using these informations : <strong>Username</strong> -> user1 and <strong>Password</strong> -> azerty 
+              <br><br><p>You can login as an admin by using these informations : <strong>Username</strong> -> root and <strong>Password</strong> -> azerty</p>
               <div class="main-button">
-                <a href="<?php echo site_url()."Template/pageProduit"; ?>">Check out our products!</a>
+                <a href="Login">Login</a>
               </div>
             </div>
           </div>
