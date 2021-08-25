@@ -1,0 +1,25 @@
+Template codeigniter ok
+Base ok 
+
+CREER 15 PRODUITS + fonctions select ok
+
+Mampotra produit ok
+login mamorina session ok + caisse mamorina session
+page produit ok
+
+Similar page = même catégorie ok
+filtrer catégorie ok
+
+Stock
+Combo box
+Login/Logout
+
+Choix caisse 
+Ajouter achat
+Valider achat
+
+caisse 
+achat
+
+12h ADMIN
+CRUD ok
