@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="<?php echo css_loader('fontawesome');?>">
     <link rel="stylesheet" href="<?php echo css_loader('tooplate-main');?>">
     <link rel="stylesheet" href="<?php echo css_loader('owl');?>">
+    <link rel="stylesheet" href="<?php echo css_loader('style');?>">
     <style>
       span {cursor:pointer; }
     </style>

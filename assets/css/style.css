@@ -1,6 +1,7 @@
 #lsouhait
 {
 	margin-top:25px;
+	text-align : center;
 }
 #lminiature
 {
@@ -16,4 +17,8 @@
 }
 .light:hover{
 	transform: scale(1.05);
+}
+.table-light th
+{
+	text-align : center;
 }

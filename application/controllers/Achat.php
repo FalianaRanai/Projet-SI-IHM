@@ -6,7 +6,9 @@ class Achat extends CI_Controller{
         $data=array();
         $this->load->helper('assets');
         $this->load->model('fonctions');
-        $this->load->view('Achat',$data);
+        $data['view'] = "listeAchat.php";
+        $data['caisse']=$this->fonctions->getCaisse();
+        $this->load->view('template',$data);
     }
 }
 ?>
