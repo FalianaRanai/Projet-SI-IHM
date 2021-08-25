@@ -10,17 +10,11 @@
             </div>
           </div>
           <div class="col-md-6">
-            
               <div id="" class="">
                 <ul class="slides">
-                  
                     <img src="<?php echo img_loader($produit[0]['Source'], "jpg") ;?>" />
-                 
-                  
                   <!-- items mirrored twice, total of 12 -->
                 </ul>
-             
-              
             </div>
           </div>
           <div class="col-md-6">
@@ -51,8 +45,6 @@
       </div>
     </div>
     <!-- Single Page Ends Here -->
-
-
     <!-- Similar Starts Here -->
     <div class="featured-items">
       <div class="container">
@@ -65,7 +57,6 @@
           </div>
           <div class="col-md-12">
             <div class="owl-carousel owl-theme">
-
             <?php for($i=0;$i<count($category);$i++){?>
               <a href="<?php echo site_url()."Template/singleProduct?id=".$category[$i]['IDProduit'];?>">
                 <div class="featured-item">
@@ -75,39 +66,11 @@
                 </div>
               </a>
             <?php } ?>
-
             </div>
           </div>
         </div>
       </div>
     </div>
     <!-- Similar Ends Here -->
-
-
-    <!-- Bootstrap core JavaScript -->
-    <script src="<?php echo js_loader('jquery.min');?>"></script>
-    <script src="<?php echo js_loader('bootstrap.bundle');?>"></script>
-
-
-    <!-- Additional Scripts -->
-    <script src="<?php echo js_loader('custom');?>"></script>
-    <script src="<?php echo js_loader('owl');?>"></script>
-    <script src="<?php echo js_loader('isotope');?>"></script>
-    <script src="<?php echo js_loader('flex-slider');?>"></script>
-
-
-    <script language = "text/Javascript"> 
-      cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
-      function clearField(t){                   //declaring the array outside of the
-      if(! cleared[t.id]){                      // function makes it static and global
-          cleared[t.id] = 1;  // you could use true and false, but that's more typing
-          t.value='';         // with more chance of typos
-          t.style.color='#fff';
-          }
-      }
-    </script>
-
-
   </body>
-
 </html>
