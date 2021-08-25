@@ -19,6 +19,7 @@ class Achat extends CI_Controller{
             $data['caisse']=$this->fonctions->getCaisse();
             $data['nomProduit']=$this->fonctions->getNomProduit($this->session->userdata("idCaisse"));
             $data['achat']=$this->fonctions->getAchatCaisse($this->session->userdata("idCaisse"));
+            $data['panierAchat'] = 1;
             $this->load->view('template',$data);
             }else{
                 redirect(site_url("Login"));
@@ -33,6 +34,7 @@ class Achat extends CI_Controller{
         $data['view'] = "Panier.php";
         $data['liste'] = $this->fonctions->getBasket();
         $data['caisse']=$this->fonctions->getCaisse();
+        $data['panierAchat'] = 1;
         $this->load->view('template',$data);
     }
 }

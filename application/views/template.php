@@ -80,9 +80,17 @@ https://www.tooplate.com/view/2114-pixie
             </li>
             <?php }?>
             <?php if($this->session->userdata("utilisateur")!=NULL){?>
-              <li class="nav-item">
+
+            <?php if(isset($panierAchat)) {?>
+              <li class="nav-item active">
                 <a class="nav-link" href="<?php echo site_url("Achat/panier"); ?>"><i class="fa fa-shopping-cart" style="font-size:24px"></i></a>
               </li>
+            <?php } else { ?>
+                <li class="nav-item">
+                <a class="nav-link" href="<?php echo site_url("Achat/panier"); ?>"><i class="fa fa-shopping-cart" style="font-size:24px"></i></a>
+              </li>
+            <?php } ?>
+
               <li class="nav-item">
                 <a class="nav-link" href="<?php echo site_url("Load/Detruire");?>">Logout</a>
               </li>
