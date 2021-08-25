@@ -37,7 +37,7 @@
                 <?php if($this->session->userdata("idCaisse")!=NULL){ ?>
                  <input type="submit" class="button" value="Order Now!">
                  <?php } else { ?>
-                  <a type="submit"  class="button disabled"  aria-disabled="true">Choose Case</a>
+                  <a type="submit"  class="button disabled"  aria-disabled="true">Login and choose case to buy</a>
                   <?php } ?>
               </form>
               <div class="down-content">
