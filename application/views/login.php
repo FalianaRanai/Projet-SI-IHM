@@ -6,7 +6,6 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>Login</title>
-    <link href="login.css" rel="stylesheet">
     <link href="<?php echo css_loader("login");?>" rel="stylesheet">
   </head>
   <body>

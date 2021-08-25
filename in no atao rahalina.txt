@@ -12,10 +12,10 @@ filtrer catégorie ok
 
 Stock ok
 Login/Logout ok
-Subscribe
+Subscribe ok
 
-Choix caisse 
-Ajouter achat
+Choix caisse ok
+Liste d'achat si session
 Valider achat
 
 caisse 
