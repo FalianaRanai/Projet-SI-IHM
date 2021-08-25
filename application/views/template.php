@@ -27,17 +27,6 @@ https://www.tooplate.com/view/2114-pixie
   </head>
 
   <body>
-    
-    <!-- Pre Header -->
-    <div id="pre-header">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <span>Suspendisse laoreet magna vel diam lobortis imperdiet</span>
-          </div>
-        </div>
-      </div>
-    </div>
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
@@ -48,14 +37,35 @@ https://www.tooplate.com/view/2114-pixie
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
+            <?php if(isset($home)) {?>
+              <li class="nav-item active">
+                <a class="nav-link" href="<?php echo site_url()."Template"; ?>">Home
+                    <span class="sr-only">(current)</span>
+                </a>
+              </li>
+            <?php } else { ?>
+              <li class="nav-item">
+                <a class="nav-link" href="<?php echo site_url()."Template"; ?>">Home
+                    <span class="sr-only">(current)</span>
+                </a>
+              </li>
+            <?php }?>
+
+            <?php if(isset($products)) {?>
             <li class="nav-item active">
-              <a class="nav-link" href="index.html">Home
+              <a class="nav-link" href="<?php echo site_url()."Template/pageProduit"; ?>">Products
                 <span class="sr-only">(current)</span>
               </a>
             </li>
+            <?php } else { ?>
             <li class="nav-item">
-              <a class="nav-link" href="products.html">Products</a>
-            </li>
+              <a class="nav-link" href="<?php echo site_url()."Template/pageProduit"; ?>">Products
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>  
+            <?php }?>
+
+
             <li class="nav-item">
               <a class="nav-link" href="about.html">About Us</a>
             </li>
@@ -77,12 +87,12 @@ https://www.tooplate.com/view/2114-pixie
         <div class="row">
           <div class="col-md-12">
             <div class="caption">
-              <h2>Ecommerce HTML Template</h2>
+              <h2>Welcome,</h2>
               <div class="line-dec"></div>
-              <p>Pixie HTML Template can be converted into your desired CMS theme. Total <strong>5 pages</strong> included. You can use this Bootstrap v4.1.3 layout for any CMS. 
-              <br><br>Please tell your friends about <a rel="nofollow" href="https://www.facebook.com/tooplate/">Tooplate</a> free template site. Thank you. Photo credit goes to <a rel="nofollow" href="https://www.pexels.com">Pexels website</a>.</p>
+              <p>We are a site specializing in the sale of clothing ranging from <strong>children</strong> to <strong>adults</strong>. 
+              <br><br>We invite you to enjoy our gallery and thank you in advance for sharing our content</p>
               <div class="main-button">
-                <a href="#">Order Now!</a>
+                <a href="<?php echo site_url()."Template/pageProduit"; ?>">Check out our products!</a>
               </div>
             </div>
           </div>
@@ -106,21 +116,29 @@ https://www.tooplate.com/view/2114-pixie
           </div>
           <div class="col-md-8 offset-md-2">
             <div class="main-content">
-              <p>Integer vel turpis ultricies, lacinia ligula id, lobortis augue. Vivamus porttitor dui id dictum efficitur. Phasellus vel interdum elit.</p>
+              <p>Take advantage of our services by registering on the site:</p>
               <div class="container">
                 <form id="subscribe" action="" method="get">
                   <div class="row">
-                    <div class="col-md-7">
+                    <div class="col-md-4">
                       <fieldset>
-                        <input name="email" type="text" class="form-control" id="email" 
-                        onfocus="if(this.value == 'Your Email...') { this.value = ''; }" 
-                    	onBlur="if(this.value == '') { this.value = 'Your Email...';}"
-                    	value="Your Email..." required="">
+                        <input name="username" type="text" class="form-control" id="email" 
+                        onfocus="if(this.value == 'Username') { this.value = ''; }" 
+                    	onBlur="if(this.value == '') { this.value = 'Username';}"
+                    	value="Username" required="">
                       </fieldset>
                     </div>
-                    <div class="col-md-5">
+                    <div class="col-md-4">
                       <fieldset>
-                        <button type="submit" id="form-submit" class="button">Subscribe Now!</button>
+                        <input name="password" type="password" class="form-control" id="password" 
+                        onfocus="if(this.value == 'Password') { this.value = ''; }" 
+                      onBlur="if(this.value == '') { this.value = 'Password';}"
+                      value="Password" required="">
+                      </fieldset>
+                    </div>
+                    <div class="col-md-4">
+                      <fieldset>
+                        <button type="submit" id="form-submit" class="button">Subscribe now!</button>
                       </fieldset>
                     </div>
                   </div>
@@ -177,9 +195,7 @@ https://www.tooplate.com/view/2114-pixie
         <div class="row">
           <div class="col-md-12">
             <div class="copyright-text">
-              <p>Copyright &copy; 2019 Company Name 
-                
-                - Design: <a rel="nofollow" href="https://www.facebook.com/tooplate">Tooplate</a></p>
+              <p>Copyright &copy; 2021 ETU1304-Faliana ETU1294-Hasina </p>
             </div>
           </div>
         </div>
@@ -195,6 +211,7 @@ https://www.tooplate.com/view/2114-pixie
     <!-- Additional Scripts -->
     <script src="<?php echo js_loader('custom');?>"></script>
     <script src="<?php echo js_loader('owl');?>"></script>
+    <script src="<?php echo js_loader('isotope');?>"></script>
 
 
     <script language = "text/Javascript"> 

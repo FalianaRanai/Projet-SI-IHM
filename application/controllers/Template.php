@@ -9,6 +9,7 @@ class Template extends CI_Controller{
         $this->load->helper('assets');
         $this->load->model('fonctions');
         $data['produit']=$this->fonctions->getProduit();
+        $data['home']= 1;
         $this->load->view('template', $data);
         
     }
@@ -39,6 +40,16 @@ class Template extends CI_Controller{
         $data['category']=$this->fonctions->findProduitByCat($data['produit'][0]['IDCategorie']);
         $this->load->view('template', $data);
         
+    }
+    public function pageProduit()
+    {
+        $data = array();
+        $data['view'] = "products.php";
+        $this->load->helper('assets');
+        $this->load->model('fonctions');
+        $data['produit']=$this->fonctions->getProduit();
+        $data['products']= 1;
+        $this->load->view('template', $data);
     }
 }
 ?>
