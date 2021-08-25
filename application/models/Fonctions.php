@@ -66,43 +66,54 @@ class Fonctions extends CI_Model{
     public function insertCategorie($nomCategorie)
     {
         $sql="INSERT INTO Categorie VALUES(NULL, '%s')";
-        $sql = sprintf($sql, $nomCategorie);
+        $sql = sprintf($sql, $this->db->escape($nomCategorie));
         $this->db->query($sql);
     }
 
     public function deleteCategorie($idCategorie)
     {
         $sql="DELETE FROM Categorie WHERE IDCategorie='%s'";
-        $sql = sprintf($sql, $idCategorie);
+        $sql = sprintf($sql, $this->db->escape($idCategorie));
         $this->db->query($sql);
     }
 
     public function updateCategorie($idCategorie, $nomCategorie)
     {
         $sql="UPDATE Categorie SET NomCategorie='%s' WHERE IDCategorie='%s'";
-        $sql = sprintf($sql, $nomCategorie, $idCategorie);
+        $sql = sprintf($sql, $this->db->escape($nomCategorie), $this->db->escape($idCategorie));
         $this->db->query($sql);
     }
 
     public function insertProduit($nomProduit, $prix, $idcategorie, $source)
     {
         $sql="INSERT INTO Produit VALUES(NULL, '%s', '%s', '%s', '%s')";
-        $sql = sprintf($sql, $nomProduit, $prix, $source, $idcategorie);
+        $sql = sprintf($sql, $this->db->escape($nomProduit), $this->db->escape($prix), $this->db->escape($source), $this->db->escape($idcategorie));
         $this->db->query($sql);
     }
 
     public function deleteProduit($idProduit)
     {
         $sql="DELETE FROM Produit WHERE IDProduit='%s'";
-        $sql = sprintf($sql, $idProduit);
+        $sql = sprintf($sql, $this->db->escape($idProduit));
         $this->db->query($sql);
     }
 
     public function updateProduit($idProduit, $nomProduit, $prix, $idcategorie, $source)
     {
         $sql="UPDATE Produit SET NomProduit='%s', Prix='%s', Source='%s', IDCategorie='%s' WHERE IDProduit='%s'";
-        $sql = sprintf($sql, $nomProduit, $prix, $source, $idcategorie, $idProduit);
+        $sql = sprintf($sql, $this->db->escape($nomProduit), $this->db->escape($prix), $this->db->escape($source), $this->db->escape($idcategorie), $this->db->escape($idProduit));
         $this->db->query($sql);
+    }
+
+    public function findProduit($idproduit){
+        $sql = "SELECT * FROM Produit WHERE IDProduit=%s";
+        $sql = sprintf($sql, $this->db->escape($idproduit));
+        $query=$this->db->query($sql);
+        $retour=array();
+        foreach ($query->result_array() as $one) {
+            $retour[] = $one;
+        }
+        return $retour;
     }
 } 
 ?>

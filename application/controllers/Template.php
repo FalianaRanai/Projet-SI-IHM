@@ -9,7 +9,6 @@ class Template extends CI_Controller{
         $this->load->helper('assets');
         $this->load->model('fonctions');
         $data['produit']=$this->fonctions->getProduit();
-        $data['admin']=$this->fonctions->checkAdmin('root','azerty');
         $this->load->view('template', $data);
         
     }
@@ -29,6 +28,16 @@ class Template extends CI_Controller{
         }
         redirect(site_url("Login"));
         //var_dump($this->session->userdata('administrateur'));
+    }
+    public function singleProduct()
+    {
+        $data = array();
+        $data['view'] = "single-product.php";
+        $this->load->helper('assets');
+        $this->load->model('fonctions');
+        $data['produit']=$this->fonctions->findProduit($this->input->get('id'));
+        $this->load->view('template', $data);
+        
     }
 }
 ?>

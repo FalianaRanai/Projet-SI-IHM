@@ -12,12 +12,11 @@
             <div class="owl-carousel owl-theme">
 
             <?php for($i=0;$i<count($produit);$i++){?>
-              <a href="single-product.html">
+              <a href="<?php echo site_url()."Template/singleProduct?id=".$produit[$i]['IDProduit'];?>">
                 <div class="featured-item">
                   <img src="<?php echo img_loader($produit[$i]['Source'],'jpg');?>" alt="Item 1">
                   <h4><?php echo $produit[$i]['NomProduit'];?></h4>
                   <h6>$<?php echo $produit[$i]['Prix'];?></h6>
-                  <?php echo $admin[0]['Username'];?>
                 </div>
               </a>
             <?php } ?>
