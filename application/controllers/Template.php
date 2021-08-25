@@ -49,10 +49,10 @@ class Template extends CI_Controller{
     public function pageProduit()
     {
         $data = array();
-        $data['caisse']=$this->fonctions->getCaisse();
         $data['view'] = "products.php";
         $this->load->helper('assets');
         $this->load->model('fonctions');
+        $data['caisse']=$this->fonctions->getCaisse();
         $data['produit']=$this->fonctions->getProduit();
         $data['products']= 1;
         $this->load->view('template', $data);

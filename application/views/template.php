@@ -19,6 +19,9 @@
     <link rel="stylesheet" href="<?php echo css_loader('fontawesome');?>">
     <link rel="stylesheet" href="<?php echo css_loader('tooplate-main');?>">
     <link rel="stylesheet" href="<?php echo css_loader('owl');?>">
+    <style>
+      span {cursor:pointer; }
+    </style>
 
 <!--
 Tooplate 2114 Pixie
@@ -247,6 +250,25 @@ https://www.tooplate.com/view/2114-pixie
           t.style.color='#fff';
           }
       }
+    </script>
+
+    <script>
+      $(document).ready(function() {
+      $('.minus').click(function () {
+        var $input = $(this).parent().find('input');
+        var count = parseInt($input.val()) - 1;
+        count = count < 1 ? 1 : count;
+        $input.val(count);
+        $input.change();
+        return false;
+      });
+      $('.plus').click(function () {
+        var $input = $(this).parent().find('input');
+        $input.val(parseInt($input.val()) + 1);
+        $input.change();
+        return false;
+      });
+    });
     </script>
 
 

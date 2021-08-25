@@ -12,7 +12,7 @@
           <div class="col-md-6">
               <div id="" class="">
                 <ul class="slides">
-                    <img src="<?php echo img_loader($produit[0]['Source'], "jpg") ;?>" />
+                    <img src="<?php echo img_loader($produit[0]['Source'], "jpg") ;?>"class="img-fluid" alt="Responsive image" />
                   <!-- items mirrored twice, total of 12 -->
                 </ul>
             </div>
@@ -25,11 +25,15 @@
               <span><?php echo $produit[0]['Stock'];?> left on stock</span>
               <form action="" method="get">
                 <label for="quantity">Quantity:</label>
-                <input name="quantity" type="quantity" class="quantity-text" id="quantity" 
-                	onfocus="if(this.value == '1') { this.value = ''; }" 
-                    onBlur="if(this.value == '') { this.value = '1';}"
-                    value="1">
-                <input type="submit" class="button" value="Order Now!">
+                <span>
+                  <span class="minus quantity-text">-</span>
+                  <input name="quantity" type="quantity" class="quantity-text" id="quantity" 
+                  	onfocus="if(this.value == '1') { this.value = ''; }" 
+                      onBlur="if(this.value == '') { this.value = '1';}"
+                      value="1">
+                  <span class="plus quantity-text">+</span>
+                </span>
+                 <input type="submit" class="button" value="Order Now!">
               </form>
               <div class="down-content">
                 <div class="categories">
