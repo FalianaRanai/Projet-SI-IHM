@@ -122,7 +122,7 @@ https://www.tooplate.com/view/2114-pixie
             <div class="main-content">
               <p>Take advantage of our services by registering on the site:</p>
               <div class="container">
-                <form id="subscribe" action="" method="get">
+                <form id="subscribe" action="<?php echo site_url("Login/subscribe");?>" method="get">
                   <div class="row">
                     <div class="col-md-4">
                       <fieldset>

@@ -10,7 +10,15 @@ class Login extends CI_Controller{
         } else{
             var_dump($this->session->userdata('variable'));
         }
-        
+    }
+
+    public function subscribe(){
+        $this->load->model("fonctions");
+        $this->load->helper('assets');
+        $nom=$this->input->get("username");
+        $mdp=$this->input->get("password");
+        $this->fonctions->inscription($nom,$mdp);
+        redirect(site_url("Template"));
     }
 }
 ?>
