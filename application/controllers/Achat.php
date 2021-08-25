@@ -7,6 +7,7 @@ class Achat extends CI_Controller{
             $data = array();
             $this->load->helper('assets');
             $this->load->model('fonctions');
+            $this->fonctions->insertAchat($this->session->userdata(""));
             $data['view'] = "listeAchat.php";
             $data['caisse']=$this->fonctions->getCaisse();
             $data['nomProduit']=$this->fonctions->getNomProduit($this->session->userdata("idCaisse"));
