@@ -4,7 +4,7 @@ USE Supermarket;
 CREATE TABLE Caisse
 (
 	IDCaisse INT NOT NULL AUTO_INCREMENT,
-	NumeroCaisse INT,
+	NumeroCaisse VARCHAR(100),
 	PRIMARY KEY(IDCaisse)
 )Engine=InnoDB;
 

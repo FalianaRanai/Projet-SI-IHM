@@ -10,7 +10,7 @@ class Fonctions extends CI_Model{
 		return $retour;
     }
     
-    public function getCaise(){
+    public function getCaisse(){
         $query=$this->db->query("SELECT * FROM Caisse");
         $retour=array();
         foreach($query->result_array() as $one) {

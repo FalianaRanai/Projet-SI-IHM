@@ -9,6 +9,7 @@ class Template extends CI_Controller{
         $this->load->helper('assets');
         $this->load->model('fonctions');
         $data['produit']=$this->fonctions->getProduit();
+        $data['caisse']=$this->fonctions->getCaisse();
         $data['home']= 1;
         $this->load->view('template', $data);
         
