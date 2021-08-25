@@ -103,8 +103,9 @@ https://www.tooplate.com/view/2114-pixie
         </div>
       </div>
     </div>
-    <!-- Banner Ends Here -->
 
+    <!-- Banner Ends Here -->
+ 
     <div class="container">
       <div class="section-heading">
           <div class="line-dec"></div>
@@ -114,11 +115,12 @@ https://www.tooplate.com/view/2114-pixie
         for($i=0; $i<count($caisse); $i++)
         {
           ?>
-            <button type="button" class="btn btn-primary btn-sm"><?php echo $caisse[$i]['NumeroCaisse']; ?></button>      
+            <a href="Caisse?idCaisse=<?php echo $caisse[$i]['IDCaisse'];?>"><button type="button" class="btn btn-primary btn-sm"><?php echo $caisse[$i]['NumeroCaisse']; ?></button></a>     
           <?php
         }
       ?>
     </div>
+ 
 
     <?php include($view);?>
 

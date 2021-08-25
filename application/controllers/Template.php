@@ -20,6 +20,7 @@ class Template extends CI_Controller{
         $this->load->model('fonctions');
         $username=$this->input->post('username');
         $password=$this->input->post('password');
+        $data['caisse']=$this->fonctions->getCaisse();
         if($this->fonctions->checkAdmin($username,$password)!=NULL){
             $this->session->set_userdata("administrateur",$username);
             redirect(site_url("Admin"));
@@ -37,6 +38,7 @@ class Template extends CI_Controller{
         $data['view'] = "single-product.php";
         $this->load->helper('assets');
         $this->load->model('fonctions');
+        $data['caisse']=$this->fonctions->getCaisse();
         $data['produit']=$this->fonctions->findProduit($this->input->get('id'));
         $data['category']=$this->fonctions->findProduitByCat($data['produit'][0]['IDCategorie']);
         $data['nomCategory']=$this->fonctions->getCategoryId($data['produit'][0]['IDProduit']);
@@ -46,6 +48,7 @@ class Template extends CI_Controller{
     public function pageProduit()
     {
         $data = array();
+        $data['caisse']=$this->fonctions->getCaisse();
         $data['view'] = "products.php";
         $this->load->helper('assets');
         $this->load->model('fonctions');
