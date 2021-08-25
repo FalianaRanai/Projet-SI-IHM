@@ -79,6 +79,9 @@ https://www.tooplate.com/view/2114-pixie
             <?php }?>
             <?php if($this->session->userdata("utilisateur")!=NULL){?>
               <li class="nav-item">
+                <a class="nav-link" href="#">Liste Achat</a>
+              </li>
+              <li class="nav-item">
                 <a class="nav-link" href="Load/Detruire">Logout</a>
               </li>
             <?php } ?>
