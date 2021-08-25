@@ -23,7 +23,7 @@
               <h6>$<?php echo $produit[0]['Prix'];?></h6>
               <p><?php echo $produit[0]['Description'];?></p>
               <span><?php echo $produit[0]['Stock'];?> left on stock</span>
-              <form action="<?php echo site_url("Template/checkAchat");?>" method="get">
+              <form action="<?php echo site_url("Achat");?>" method="get">
                 <label for="quantity">Quantity:</label>
                 <span>
                   <span class="minus quantity-text">-</span>

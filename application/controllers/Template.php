@@ -65,6 +65,7 @@ class Template extends CI_Controller{
         $this->load->model('fonctions');
         $data['somme']=$this->fonctions->getSommeCaisse(1);
         echo $data['somme'][0]['somme'];
+        $this->load->view('listeAchat',$data);
         }else{
             redirect(site_url("Login"));
         }

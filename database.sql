@@ -35,9 +35,11 @@ CREATE TABLE Achat
 	IDCaisse INT,
 	IDProduit INT,
 	Quantite INT,
+	IDUtilisateur INT,
 	PRIMARY KEY(IDAchat),
 	FOREIGN KEY(IDCaisse) REFERENCES Caisse(IDCaisse),
-	FOREIGN KEY(IDProduit) REFERENCES Produit(IDProduit)
+	FOREIGN KEY(IDProduit) REFERENCES Produit(IDProduit),
+	FOREIGN KEY(IDUtilisateur) REFERENCES Utilisateur(IDUtilisateur)
 )Engine=InnoDB;
 
 CREATE TABLE Admin
@@ -84,4 +86,5 @@ INSERT INTO Caisse VALUES(NULL,"Caisse 1"),
 	(NULL,"Caisse 2"),
 	(NULL,"Caisse 3");
 
-INSERT INTO Achat VALUES(NULL,1,3,6);
+INSERT INTO Achat VALUES(NULL,1,3,6,1);
+INSERT INTO Achat VALUES(NULL,1,2,7,1);

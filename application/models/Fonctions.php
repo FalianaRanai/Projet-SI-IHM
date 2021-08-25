@@ -152,6 +152,17 @@ class Fonctions extends CI_Model{
         return $retour;
     }
 
+    public function getAchatCaisse($idCaisse){
+        $sql="SELECT * FROM Achat WHERE IDCaisse=%s";
+        $sql=sprintf($sql,$this->db->escape($idCaisse));
+        $query=$this->db->query($sql);
+        $retour=array();
+        foreach ($query->result_array() as $one) {
+            $retour[] = $one;
+        }
+        return $retour;
+    }
+
     public function getSommeCaisse($idCaisse){
         
         $sql="SELECT SUM(p.prix) as somme FROM Achat a, Produit p WHERE a.IDProduit=p.IDProduit AND a.IDCaisse='%s'";
@@ -178,6 +189,28 @@ class Fonctions extends CI_Model{
         $sql = "INSERT INTO Achat VALUES(NULL,%s,%s,%s)";
         $sql = sprintf($sql,$this->db->escape($IDCaisse),$this->db->escape($IDProduit),$this->db->escape($IDQuantite));
         $this->db->query($sql);
+    }
+
+    public function getNomCaisse($idCaisse){
+        $sql="SELECT * FROM caisse WHERE IDCaisse=%s";
+        $sql=sprintf($sql,$this->db->escape($idCaisse));
+        $query=$this->db->query($sql);
+        $retour=array();
+        foreach($query->result_array() as $one){
+            $retour[]=$one;
+        }
+        return $retour;
+    }
+
+    public function getNomProduit($idCaisse){
+        $sql="SELECT p.* FROM produit p, achat a WHERE p.IDProduit=a.IDProduit AND a.IDCaisse=%s";
+        $sql=sprintf($sql,$this->db->escape($idCaisse));
+        $query=$this->db->query($sql);
+        $retour=array();
+        foreach($query->result_array() as $one){
+            $retour[]=$one;
+        }
+        return $retour;
     }
 } 
 ?>

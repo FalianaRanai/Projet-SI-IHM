@@ -17,39 +17,39 @@
 				</tr>
 			  </thead>	
 			  <tbody>
-
-				<form action="#" method="POST">
+				<?php for($i=0;$i<count($achat);$i++){?>
+				<form action="Template" method="POST">
 					<input type="hidden" name="modifProd" value="1">
 					<tr class="light">
 					  <td>
 						<div id="lsouhait">
-							Caisse 1
+							Caisse <?php echo $this->session->userdata('idCaisse');?>
 							<input type="hidden" name="idProduit" value="">
 						</div>
 					  </td>
 					  <td>
 						<div id="lsouhait">
-							
+							<?php echo $nomProduit[$i]['NomProduit'];?>
 						</div>
 					  </td>
 					  <td>
 						<div id="lsouhait">
-							
+						<img src="<?php echo img_loader($nomProduit[$i]['Source'],"jpg");?>" class="img-fluid" width="100px;">
 						</div>
 					  </td>
 					  <td>
 						<div id="lsouhait">
-							
+							<?php echo $nomProduit[$i]["Prix"];?>
 						</div>
 					  </td>
 					  <td>
 						<div id="lsouhait">
-							
+							<?php echo $achat[$i]["Quantite"];?>
 						</div>
 					  </td>
 					  <td>
 						<div id="lsouhait">
-							
+							<?php echo $nomProduit[$i]["Prix"]*$achat[$i]["Quantite"];?>
 						</div>
 					  </td>
 					  <td>
@@ -59,7 +59,7 @@
 					  </td>
 					</tr>
 				</form>
-
+				<?php }?>
 			  </tbody>
 			</table>
 		</div>
