@@ -22,4 +22,6 @@ caisse ok
 achat ok
 
 12h ADMIN
+
 CRUD ok
+Stat / Tableau de bord 
