@@ -10,9 +10,9 @@ page produit ok
 Similar page = même catégorie ok
 filtrer catégorie ok
 
-Stock
-Combo box
-Login/Logout
+Stock ok
+Login/Logout ok
+Subscribe
 
 Choix caisse 
 Ajouter achat
