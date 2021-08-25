@@ -212,5 +212,18 @@ class Fonctions extends CI_Model{
         }
         return $retour;
     }
+
+    public function updateStock($nomProduit,$quantite,$avant){
+        $final=$avant-$quantite;
+        $sql="UPDATE Produit SET Stock=%s WHERE NomProduit=%s";
+        $sql = sprintf($sql, $this->db->escape($final), $this->db->escape($nomProduit));
+        $this->db->query($sql);
+    }
+
+    public function deleteAchat($idAchat){
+        $sql="DELETE FROM Achat WHERE IDAchat=%s";
+        $sql = sprintf($sql, $this->db->escape($idAchat));
+        $this->db->query($sql);
+    }
 } 
 ?>

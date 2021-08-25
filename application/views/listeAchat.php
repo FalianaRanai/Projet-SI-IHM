@@ -18,18 +18,20 @@
 			  </thead>	
 			  <tbody>
 				<?php for($i=0;$i<count($achat);$i++){?>
-				<form action="Template" method="POST">
+				<form action="<?php echo site_url("Validation");?>" method="POST">
 					<input type="hidden" name="modifProd" value="1">
 					<tr class="light">
 					  <td>
 						<div id="lsouhait">
 							Caisse <?php echo $this->session->userdata('idCaisse');?>
-							<input type="hidden" name="idProduit" value="">
+							<input type="hidden" name="idAchat" value="<?php echo $achat[$i]['IDAchat'];?>">
 						</div>
 					  </td>
 					  <td>
 						<div id="lsouhait">
 							<?php echo $nomProduit[$i]['NomProduit'];?>
+							<input type="hidden" name="NomProduit" value="<?php echo $nomProduit[$i]['NomProduit'];?>">
+							<input type="hidden" name="stock" value="<?php echo $nomProduit[$i]['Stock'];?>"
 						</div>
 					  </td>
 					  <td>
@@ -40,11 +42,14 @@
 					  <td>
 						<div id="lsouhait">
 							<?php echo $nomProduit[$i]["Prix"];?>
+
+							
 						</div>
 					  </td>
 					  <td>
 						<div id="lsouhait">
 							<?php echo $achat[$i]["Quantite"];?>
+							<input type="hidden" name="quantite" value="<?php echo $achat[$i]["Quantite"];?>">
 						</div>
 					  </td>
 					  <td>

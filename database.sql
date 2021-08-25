@@ -86,5 +86,14 @@ INSERT INTO Caisse VALUES(NULL,"Caisse 1"),
 	(NULL,"Caisse 2"),
 	(NULL,"Caisse 3");
 
-INSERT INTO Achat VALUES(NULL,1,3,6,1);
-INSERT INTO Achat VALUES(NULL,1,2,7,1);
+INSERT INTO Achat VALUES(NULL,1,3,6,1),
+	(NULL,1,2,7,1),
+	(NULL,1,3,8,1),
+	(NULL,1,2,5,1),
+	(NULL,2,10,2,1),
+	(NULL,2,4,7,1),
+	(NULL,2,3,4,1),
+	(NULL,2,14,3,1),
+	(NULL,3,1,2,1),
+	(NULL,3,5,3,1),
+	(NULL,3,4,2,1);
