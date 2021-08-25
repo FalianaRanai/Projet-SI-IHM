@@ -105,6 +105,21 @@ https://www.tooplate.com/view/2114-pixie
     </div>
     <!-- Banner Ends Here -->
 
+    <div class="container">
+      <div class="section-heading">
+          <div class="line-dec"></div>
+          <h1>Choose a fund</h1>
+      </div>
+      <?php 
+        for($i=0; $i<count($caisse); $i++)
+        {
+          ?>
+            <button type="button" class="btn btn-primary btn-sm"><?php echo $caisse[$i]['NumeroCaisse']; ?></button>      
+          <?php
+        }
+      ?>
+    </div>
+
     <?php include($view);?>
 
 
