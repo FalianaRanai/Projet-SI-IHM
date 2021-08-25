@@ -3,7 +3,7 @@
 	<h1 class="h2">Liste d'achat</h1>
   </div>
 	<div class="row">
-		<div class="col-md-10 offset-1">
+		<div class="col-md-12">
 			<table class="table table-light  table-striped">
 			  <thead>
 				<tr>

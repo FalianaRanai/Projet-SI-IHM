@@ -34,7 +34,11 @@
                   <span class="plus quantity-text">+</span>
                 </span>
                 <input type="hidden" name="idProduit" value="<?php echo $produit[0]['IDProduit'];?>">
+                <?php if($this->session->userdata("idCaisse")!=NULL){ ?>
                  <input type="submit" class="button" value="Order Now!">
+                 <?php } else { ?>
+                  <a type="submit"  class="button disabled"  aria-disabled="true">Choose Case</a>
+                  <?php } ?>
               </form>
               <div class="down-content">
                 <div class="categories">

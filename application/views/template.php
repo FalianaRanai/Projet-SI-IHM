@@ -83,7 +83,7 @@ https://www.tooplate.com/view/2114-pixie
                 <a class="nav-link" href="Achat">Liste Achat</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="Load/Detruire">Logout</a>
+                <a class="nav-link" href="<?php echo site_url("Load/Detruire");?>">Logout</a>
               </li>
             <?php } ?>
           </ul>
