@@ -10,24 +10,16 @@
             </div>
           </div>
           <div class="col-md-6">
-            <div class="product-slider">
-              <div id="slider" class="flexslider">
+            
+              <div id="" class="">
                 <ul class="slides">
-                  <li>
+                  
                     <img src="<?php echo img_loader($produit[0]['Source'], "jpg") ;?>" />
-                  </li>
-                  <li>
-                    <img src="assets/images/big-02.jpg" />
-                  </li>
-                  <li>
-                    <img src="assets/images/big-03.jpg" />
-                  </li>
-                  <li>
-                    <img src="assets/images/big-04.jpg" />
-                  </li>
+                 
+                  
                   <!-- items mirrored twice, total of 12 -->
                 </ul>
-              </div>
+             
               
             </div>
           </div>
@@ -75,7 +67,7 @@
             <div class="owl-carousel owl-theme">
 
             <?php for($i=0;$i<count($category);$i++){?>
-              <a href="single-product.html">
+              <a href="<?php echo site_url()."Template/singleProduct?id=".$category[$i]['IDProduit'];?>">
                 <div class="featured-item">
                   <img src="<?php echo img_loader($category[$i]['Source'],"jpg");?>" alt="Item 1">
                   <h4><?php echo $category[$i]["NomProduit"];?></h4>
