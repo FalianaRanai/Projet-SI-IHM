@@ -165,7 +165,7 @@ https://www.tooplate.com/view/2114-pixie
                     </div>
                     <div class="col-md-4">
                       <fieldset>
-                        <button type="submit" id="form-submit" class="button">Subscribe now!</button>
+                        <button type="submit" id="form-submit" class="button">Subscribe</button>
                       </fieldset>
                     </div>
                   </div>
