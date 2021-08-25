@@ -4,7 +4,7 @@ Base ok
 CREER 15 PRODUITS + fonctions select ok
 
 Mampotra produit ok
-login mamorina session ok + caisse mamorina session
+login mamorina session ok + caisse mamorina session ok
 page produit ok
 
 Similar page = même catégorie ok

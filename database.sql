@@ -83,3 +83,5 @@ Coloris gris-vert.", 11),
 INSERT INTO Caisse VALUES(NULL,"Caisse 1"),
 	(NULL,"Caisse 2"),
 	(NULL,"Caisse 3");
+
+INSERT INTO Achat VALUES(NULL,1,3,6);
