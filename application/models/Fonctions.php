@@ -226,9 +226,9 @@ class Fonctions extends CI_Model{
         $this->db->query($sql);
     }
 
-    public function insertAchat($idcaisse,$idproduit,$quantite,$utilisateur){
-        $sql="INSERT INTO Achat VALUES(NULL,%s,%s,%s,%s)";
-        $sql=sprintf($sql,$this->db->escape($idcaisse),$this->db->escape($idproduit),$this->db->escape($quantite),$this->db>escape($utilisateur));
+    public function insertAchate($idcaisse,$idproduit,$quantite,$utilisateur){
+        $sql="INSERT INTO Achat VALUES(NULL, '%s', '%s', '%s', '%s')";
+        $sql=sprintf($sql,$idcaisse,$idproduit,$quantite,$utilisateur);
         $this->db->query($sql);
     }
 } 
