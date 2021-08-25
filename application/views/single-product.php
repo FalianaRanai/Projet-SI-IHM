@@ -25,6 +25,16 @@
               <span><?php echo $produit[0]['Stock'];?> left on stock</span>
               <form action="<?php echo site_url("Template/checkAchat");?>" method="get">
                 <label for="quantity">Quantity:</label>
+<<<<<<< HEAD
+=======
+<<<<<<< Updated upstream
+                <input name="quantity" type="quantity" class="quantity-text" id="quantity" 
+                	onfocus="if(this.value == '1') { this.value = ''; }" 
+                    onBlur="if(this.value == '') { this.value = '1';}"
+                    value="1">
+                <input type="submit" class="button" value="Order Now!">
+=======
+>>>>>>> hasina
                 <span>
                   <span class="minus quantity-text">-</span>
                   <input name="quantity" type="quantity" class="quantity-text" id="quantity" 
@@ -33,7 +43,13 @@
                       value="1">
                   <span class="plus quantity-text">+</span>
                 </span>
+<<<<<<< HEAD
                  <input type="submit" class="button" value="Order Now!">
+=======
+                <input type="hidden" name="idProduit" value="<?php echo $produit[0]['IDProduit'];?>">
+                 <input type="submit" class="button" value="Order Now!">
+>>>>>>> Stashed changes
+>>>>>>> hasina
               </form>
               <div class="down-content">
                 <div class="categories">
