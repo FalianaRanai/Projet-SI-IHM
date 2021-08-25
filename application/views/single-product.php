@@ -22,7 +22,7 @@
               <h4><?php echo $produit[0]['NomProduit'];?></h4>
               <h6>$<?php echo $produit[0]['Prix'];?></h6>
               <p><?php echo $produit[0]['Description'];?></p>
-              <span>7 left on stock</span>
+              <span><?php echo $produit[0]['Stock'];?> left on stock</span>
               <form action="" method="get">
                 <label for="quantity">Quantity:</label>
                 <input name="quantity" type="quantity" class="quantity-text" id="quantity" 
