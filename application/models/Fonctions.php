@@ -126,5 +126,11 @@ class Fonctions extends CI_Model{
         }
         return $retour;
     }
+
+    public function inscription($username,$mdp){
+        $sql = "INSERT INTO Utilisateur VALUES (NULL,%s,SHA1('%s'))";
+        $sql = sprintf($sql,$this->db->escape($username),$this->db->escape($mdp));
+        $this->db->query($sql);
+    }
 } 
 ?>
