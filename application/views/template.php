@@ -69,12 +69,16 @@ https://www.tooplate.com/view/2114-pixie
             <li class="nav-item">
               <a class="nav-link" href="about.html">About Us</a>
             </li>
+            <?php if($this->session->userdata("utilisateur")==NULL){?>
             <li class="nav-item">
               <a class="nav-link" href="Login">Login</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="Load/Detruire">Logout</a>
-            </li>
+            <?php }?>
+            <?php if($this->session->userdata("utilisateur")!=NULL){?>
+              <li class="nav-item">
+                <a class="nav-link" href="Load/Detruire">Logout</a>
+              </li>
+            <?php } ?>
           </ul>
         </div>
       </div>
