@@ -11,7 +11,7 @@ class Template extends CI_Controller{
         $data['produit']=$this->fonctions->getProduit();
         $data['caisse']=$this->fonctions->getCaisse();
         $data['home']= 1;
-        $this->session->set_userdata($this->input->get("idCaisse"));
+        $this->session->set_userdata("idCaisse",$this->input->get("idCaisse"));
         $this->load->view('template', $data);
         
     }
