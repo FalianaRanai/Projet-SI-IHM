@@ -29,19 +29,6 @@ CREATE TABLE Produit
 )Engine=InnoDB;
 
 
-CREATE TABLE Achat
-(
-	IDAchat INT NOT NULL AUTO_INCREMENT,
-	IDCaisse INT,
-	IDProduit INT,
-	Quantite INT,
-	IDUtilisateur INT,
-	PRIMARY KEY(IDAchat),
-	FOREIGN KEY(IDCaisse) REFERENCES Caisse(IDCaisse),
-	FOREIGN KEY(IDProduit) REFERENCES Produit(IDProduit),
-	FOREIGN KEY(IDUtilisateur) REFERENCES Utilisateur(IDUtilisateur)
-)Engine=InnoDB;
-
 CREATE TABLE Admin
 (
 	IDAdmin INT NOT NULL AUTO_INCREMENT,
@@ -56,6 +43,19 @@ CREATE TABLE Utilisateur
 	Username VARCHAR(100),
 	Password VARCHAR(41),
 	PRIMARY KEY(IDUtilisateur)
+)Engine=InnoDB;
+
+CREATE TABLE Achat
+(
+	IDAchat INT NOT NULL AUTO_INCREMENT,
+	IDCaisse INT,
+	IDProduit INT,
+	Quantite INT,
+	IDUtilisateur INT,
+	PRIMARY KEY(IDAchat),
+	FOREIGN KEY(IDCaisse) REFERENCES Caisse(IDCaisse),
+	FOREIGN KEY(IDProduit) REFERENCES Produit(IDProduit),
+	FOREIGN KEY(IDUtilisateur) REFERENCES Utilisateur(IDUtilisateur)
 )Engine=InnoDB;
 
 INSERT INTO ADMIN values(NULL,'root',sha1('azerty'));

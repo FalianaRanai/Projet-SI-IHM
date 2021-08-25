@@ -24,5 +24,16 @@ class Achat extends CI_Controller{
                 redirect(site_url("Login"));
             }
     }
+
+    public function panier()
+    {
+        $data = array();
+        $this->load->helper('assets');
+        $this->load->model('fonctions');
+        $data['view'] = "Panier.php";
+        $data['liste'] = $this->fonctions->getBasket();
+        $data['caisse']=$this->fonctions->getCaisse();
+        $this->load->view('template',$data);
+    }
 }
 ?>

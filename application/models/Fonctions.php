@@ -231,5 +231,17 @@ class Fonctions extends CI_Model{
         $sql=sprintf($sql,$idcaisse,$idproduit,$quantite,$utilisateur);
         $this->db->query($sql);
     }
+
+    public function getBasket()
+    {
+        $sql = "SELECT a.IDAchat, c.NumeroCaisse, p.NomProduit, p.Source, p.prix, a.Quantite, (a.Quantite*p.prix) as total, p.Stock FROM Achat a JOIN Caisse c ON c.IDCaisse = a.IDCaisse JOIN Produit p ON p.IDProduit = a.IDProduit";
+         $query=$this->db->query($sql);
+        $retour=array();
+        foreach ($query->result_array() as $one) {
+            $retour[] = $one;
+        }
+        return $retour;
+
+    }
 } 
 ?>

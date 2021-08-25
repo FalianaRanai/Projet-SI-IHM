@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="<?php echo css_loader('tooplate-main');?>">
     <link rel="stylesheet" href="<?php echo css_loader('owl');?>">
     <link rel="stylesheet" href="<?php echo css_loader('style');?>">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
       span {cursor:pointer; }
     </style>
@@ -71,7 +72,7 @@ https://www.tooplate.com/view/2114-pixie
 
 
             <li class="nav-item">
-              <a class="nav-link" href="about.html">About Us</a>
+              <a class="nav-link" href="<?php echo site_url()."Template"; ?>">About Us</a>
             </li>
             <?php if($this->session->userdata("utilisateur")==NULL){?>
             <li class="nav-item">
@@ -80,7 +81,7 @@ https://www.tooplate.com/view/2114-pixie
             <?php }?>
             <?php if($this->session->userdata("utilisateur")!=NULL){?>
               <li class="nav-item">
-                <a class="nav-link" href="Achat">Liste Achat</a>
+                <a class="nav-link" href="<?php echo site_url("Achat/panier"); ?>"><i class="fa fa-shopping-cart" style="font-size:24px"></i></a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="<?php echo site_url("Load/Detruire");?>">Logout</a>
