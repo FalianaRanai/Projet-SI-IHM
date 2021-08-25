@@ -25,11 +25,24 @@
               <span><?php echo $produit[0]['Stock'];?> left on stock</span>
               <form action="" method="get">
                 <label for="quantity">Quantity:</label>
+<<<<<<< Updated upstream
                 <input name="quantity" type="quantity" class="quantity-text" id="quantity" 
                 	onfocus="if(this.value == '1') { this.value = ''; }" 
                     onBlur="if(this.value == '') { this.value = '1';}"
                     value="1">
                 <input type="submit" class="button" value="Order Now!">
+=======
+                <span>
+                  <span class="minus quantity-text">-</span>
+                  <input name="quantity" type="quantity" class="quantity-text" id="quantity" 
+                  	onfocus="if(this.value == '1') { this.value = ''; }" 
+                      onBlur="if(this.value == '') { this.value = '1';}"
+                      value="1">
+                  <span class="plus quantity-text">+</span>
+                </span>
+                <input type="hidden" name="idProduit" value="<?php echo $produit[0]['IDProduit'];?>">
+                 <input type="submit" class="button" value="Order Now!">
+>>>>>>> Stashed changes
               </form>
               <div class="down-content">
                 <div class="categories">

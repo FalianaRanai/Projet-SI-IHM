@@ -57,5 +57,23 @@ class Template extends CI_Controller{
         $data['products']= 1;
         $this->load->view('template', $data);
     }
+<<<<<<< Updated upstream
+=======
+
+    public function checkAchat(){
+        if($this->session->userdata("utilisateur")!=NULL){
+            $data=array();
+            $this->load->helper('assets');
+            $this->load->model('fonctions');
+            //$this->load->view('Achat',$data);
+            $data['sommeCaisse']=$this->fonctions->getSommeCaisse(1);
+            //$data['sommeCaisse']=$this->fonctions->getSommeCaisse(1);
+            echo $data['sommeCaisse'][0]['somme'];
+            echo "azerty";
+        }else{
+            redirect(site_url("Login"));
+        }
+    }
+>>>>>>> Stashed changes
 }
 ?>
